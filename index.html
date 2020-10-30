@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/stile.css">
+    <title>Arkham Asylum JS</title>
+</head>
+<body>
+    
+    <header id="headerContainer" class="headerContainer">
+        
+        
+        <img src="./assets/img/logo.svg" id="imglogo" class="logoMain m-5"/> 
+        
+        
+        <h1 id="titlePage" class="m-10">Arkham Asylum JS</h1>
+        
+        <button  class="btnLogin m-5" id="btnLogin">Login</button>
+    
+    
+    </header>
+    <div id="modalContainer">
+        <div class="modalBody">
+            <div id="modalHeader">
+                <button type="button" class="btn btnRemove" id="btnClose">x</button>
+            </div>
+            <form class="form" id="modalLogin" novalidate>
+                <div class="inputLogin">
+                    <div class="wrapper">
+                    <label for="username">username</label>
+                    <input
+                        type="text"
+                        value=""
+                        name="user"
+                        id="username"
+                        placeholder='username'
+                        class="inputField">
+                    </div>
+                    <div class="wrapper">
+                        <label for="password"> password </label>
+                        <input 
+                        type="password"
+                        value=""
+                        name="pwd"
+                        id="pwd"
+                        placeholder="********"
+                        class="inputField"
+                        > 
+                    </div>
+                    <button type="submit" id="loginBtn" class="btnLogin btnLoginModal">Login</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    
+    <div id='containerCard'>
+        <a href="#detenuti">
+            <button id= cardD>
+                <img src="./assets/img/handcuff1.svg" alt="detenuto" id="imgdetenuti">
+                </button>
+        </a>
+        <a href="#guardie">
+            <button id= cardG>
+                <img src="./assets/img/policeman.svg" alt="guardie" id="imgguardie">
+                </button>
+        </a>
+    </div>
+
+    <div >
+        <button type="submit"id='btnDetenutiAggiungi'>aggiungi detenuti</button>
+        <button id='btnGuardieAggiungi'> aggiungi Sbirro(infame solo le lame) </button>
+    </div>
+
+    <div id="containerContatore"></div>
+
+    <template id="templateDetenuti">
+        <div id= contatoreDetenuti>
+            <div class="textContainer">
+                <h2></h2>
+            </div>
+        </div>
+    </template>
+    
+    
+    <template id='detenuti'>
+        <div id="cardD" class="renderDetenuti">
+            <div class="textContainer">
+                <h2></h2> <!-- nome personaggio-->
+                <h3></h3> <!-- razza-->
+                <strong></strong> <!-- livello pericolo-->
+                
+                
+                    
+                    
+                    <!-- <a href="#ulChar"></a> -->
+                    
+                    <h4></h4>
+                    
+                    <ul id='ulChar'>
+                        <li id="1"></li> <!--colore occhi -->
+                        <li id="2"></li> <!--colore capelli -->
+                        <li id="3"></li> <!-- altezza-->
+                        <li id="4"></li> <!--Peso -->
+                    </ul>
+                    <ul id='fascicolo'>
+                        <li id="5"></li> <!--data Arresto -->
+                        <li id="6"></li> <!--data Scarcerazione -->
+                        <li id="7"></li> <!-- reato-->
+                        <li id="8"></li> <!-- id-->
+                    </ul>
+
+
+            </div>
+            </div>
+    </template>
+
+        <template id='guardie'>
+            <div id="cardG">
+                <div class="textContainer">
+                    <h2 id="textH2"></h2> <!-- nome -->
+                    <h3></h3> <!-- cognome-->
+                    <strong></strong> <!-- livello pericolo-->
+                    
+                    
+                    <button 
+                        type="button" 
+                        id="mortoBtn"></button>
+                    <button 
+                    type="button" 
+                    id="scarceratoBtn">Scarcerato</button>
+    
+                </div>
+            </div>
+        </template>
+
+    <!-- <div id="containerGuardie"> </div>
+
+    <div id="containerDetenuti"> </div> -->
+
+    <!-- Attenzione che sotto c'è il conteiner, o commenti quello e metti che  -->
+
+    <footer id="footer"> </footer>
+
+
+
+
+
+
+
+<!-- modal per aggiungi nuovo carcerto -->
+    <div id="modalContainer"> 
+        <div class="modalBody">
+            <div id="modalHeader">
+                <button type="button" class="btn btnRemove" id="btnClose">x</button>
+            </div>
+            <form class="form" id="formAdd" novalidate>
+                <div class="inputLogin">
+                    <div class="wrapper">
+                    <label for="nome carcerato">nome carcerato</label>
+                    <input
+                        type="text"
+                        value=""
+                        name="user"
+                        id="nomeCarcerato"
+                        
+                        class="inputField">
+                    </div>
+                    <div class="wrapper">
+                        <label for="razza">razza</label>
+                        <input 
+                        type="text"
+                        value=""
+                        name="razza"
+                        id="razza"
+                        
+                        class="inputField"
+                        > 
+                    </div>
+                    
+                    
+                    <fieldset>
+                    <legend>Livello</legend>
+                    <select id="selectLivello"name="livello" >
+                    <option value="Livello 1" selected="selected">Livello 1</option>
+                    <option value="Livello 2">Livello 2 </option>
+                    <option value="Livello 3">Livello 3</option>
+                    <option value="Livello 4">Livello 4</option>
+                    <option value="Livello 5">Livello 5</option>
+                    <option value="Livello 6">Livello 6</option>
+                    <option value="Livello 7">Livello 7</option>
+                    <option value="Livello 8">Livello 8</option>
+                    <option value="Livello 9">Livello 9</option>
+                    <option value="Livello 10">Livello 10 </option>
+                    </select>
+                    </fieldset>
+                    <div class="wrapper">
+                        <label for="razza">occhi</label>
+                        <input 
+                        type="text"
+                        value=""
+                        name="razza"
+                        id="occhi"
+                        
+                        class="inputField"
+                        > 
+                    </div>
+                    <div class="wrapper">
+                        <label for="razza">capelli</label>
+                        <input 
+                        type="text"
+                        value=""
+                        name="razza"
+                        id="capelli"
+                        
+                        class="inputField"
+                        > 
+                    </div>
+                    <div class="wrapper">
+                        <label for="razza">altezza</label>
+                        <input 
+                        type="text"
+                        value=""
+                        name="razza"
+                        id="altezza"
+                        
+                        class="inputField"
+                        > 
+                    </div>
+                    <div class="wrapper">
+                        <label for="razza">peso</label>
+                        <input 
+                        type="text"
+                        value=""
+                        name="razza"
+                        id="peso"
+                        
+                        class="inputField"
+                        > 
+                    </div>
+                    <div class="wrapper">
+                        <label for="razza">arresto</label>
+                        <input 
+                        type="text"
+                        value=""
+                        name="razza"
+                        id="arresto"
+                        
+                        class="inputField"
+                        > 
+                    </div>
+                    <div class="wrapper">
+                        <label for="razza">scarcerazione</label>
+                        <input 
+                        type="text"
+                        value=""
+                        name="razza"
+                        id="scarcerazione"
+                        
+                        class="inputField"
+                        > 
+                    </div>
+                    <div class="wrapper">
+                        <label for="razza">reato</label>
+                        <input 
+                        type="text"
+                        value=""
+                        name="razza"
+                        id="reato"
+                        
+                        class="inputField"
+                        > 
+                    </div>
+                    <div class="wrapper">
+                        <label for="razza">id</label>
+                        <input 
+                        type="text"
+                        value=""
+                        name="razza"
+                        id="idDetenuto"
+                        
+                        class="inputField"
+                        > 
+                    </div>
+
+                    <button type="submit" id="loginBtn" class="btnLogin btnLoginModal">Inserisci</button>
+                </div>
+            </form>
+        </div>
+    </div> 
+    
+    <div id="container"></div>
+    <script src="/components/jsonDetenutiArkham.js"> </script>
+    <script src="/components/jsonGuardieArkam.js"> </script>
+    <script src="/components/form.js"></script>
+    <script src="./assets/js/main.js"></script>
+</body>
+
+</html>

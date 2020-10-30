@@ -1,0 +1,312 @@
+/* colors */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap');
+:root{
+
+    /* backgroundvari */
+    --black: #05060a;
+    --darkBlue: #506f86;
+    /* testi */
+    --uranianBlue: #b9dff5;
+    --camel: #c7a383;
+     
+}
+/* reset parametri default */
+*{  
+
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+.m-10{
+    margin:10vh;
+}
+.mt-5{
+    margin:5vh;
+}
+
+/*---------- TYPE ------------ */
+h1{
+    font-size: 80px;
+    text-transform: uppercase;
+}
+
+
+/*---------- GENERIC ------------ */
+body{
+    
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--black);
+    
+}
+/* --------------Main Page-------------- */
+
+.headerContainer{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   
+}
+.logoMain{
+    width: 500px;
+}
+.btnLogin{
+    border:none;
+    font-size: 20px;
+    text-transform: uppercase;
+    padding:20px 60px;
+    background-color: var(--darkBlue);
+    color: #fff;
+    border-radius: 30px;
+    
+}
+.btnLogin:hover{
+    cursor:pointer;
+    background-color: var(--uranianBlue);
+    color: var(--black);
+}
+#btnDetenutiAggiungi{
+    display:none;
+}
+#btnGuardieAggiungi{
+    display:none;
+}
+
+/*------------------------ MODAL-------------------------- */
+#modalContainer{
+    width: 100vw;
+    height: 100vh;
+    padding: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding-top: 10rem;
+    display:none;
+    
+}
+.modalBody{
+    border:1px var(--uranianBlue) solid;
+    position:relative;
+    margin:0 auto;
+    width:70vh;
+    height:70vh;
+    /* background-color: var(--black); */
+    background-color:black;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+
+}
+/* -------figli di body ---------*/
+#modalHeader{
+    position: absolute;
+    top:0;
+    right:0;
+    display:flex;
+}
+.btnRemove{
+    background-color:#506f86;
+    color:white;
+    border:none;
+    border-bottom-left-radius:10px; 
+    border-top-right-radius:10px; 
+    padding:20px;
+    font-size: 20px;
+    cursor:pointer;
+}
+
+
+.inputLogin{
+    display:flex;
+   
+    justify-content: space-between;
+    
+}
+#modalLogin{
+    margin:0 auto;
+    width:100%; 
+    height:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; 
+
+}
+.btnLoginModal{
+    background-color: transparent;
+    color:var(--darkBlue);
+    border: 2px var(--darkBlue) solid;
+}
+.wrapper{margin:3vh;
+    
+    display: block;
+}
+.btnLoginModal{
+    text-align: center;
+    margin-top: 3vh;
+    
+}
+
+#titlePage{
+    color: white;
+}
+
+.modalVisible{
+    display:flex !important;
+}
+/*salvo*/
+.visible {
+    display: block !important;
+  }
+  /*end*/
+.inputLogin{
+    /* margin:0 auto; aaa ma ci sei ahaha*/
+    width:100%;
+    height:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color:white;
+}
+
+.inputField{
+    margin-left: 5vh;
+    background-color: transparent;
+    border:none;
+    border-bottom:  1px solid var(--uranianBlue);
+    color:white;
+}
+.inputField::placeholder{font-weight: 300;
+    font-size: 18px;
+    font-style: italic;
+    color:hsla(0, 0%, 83%, 0.153);
+}
+.inputField:focus{
+    outline: none;
+    border-bottom: 2px solid var(--uranianBlue);
+}
+label{
+    font-size: 18px;
+    color: var(--uranianBlue);
+}
+
+#modCont{display:none;}
+/* --------------card detenuti e guardie ------------  */
+#containerCard{display:none; justify-content: space-around;}   
+#containerCard button{background-color: background-color: var(--black); border:none;cursor:pointer}
+#containerCard #imgdetenuti{width:50%;background-color: transparent;}
+#containerCard #imgguardie{width:50%;background-color: var(--black);}
+
+
+
+
+
+/* --------------render Detenuti------------  */
+
+/* .renderDetenuti{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--darkBlue);
+} */
+#container{
+    margin-top: 10vh;
+    display:flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    
+    /* align-items: center;
+    color: var(--darkBlue); */
+}
+.textContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color:var(--darkBlue);
+    width: 50vh;
+    height: 60vh;
+    border-radius: 10px;
+    padding: 5vh;
+    margin: 5vh 0;
+    border:2px solid var( --uranianBlue);
+}
+.textContainer > h2{
+    color:white;
+    
+}
+.textContainer > button{
+    width:10vh;
+    margin:5px;
+}
+.textContainer  li{
+    list-style-type: none;
+    color:white;
+}
+#cardG{
+
+}
+
+
+/* .renderDetenuti{
+    width: 30vh;
+    height: 60vh;
+} */
+
+
+/* #containerCard{
+    justify-content: center;
+
+    *volevo metterlo centrato tutto
+} */
+
+/* #container h2, h3, strong, li, ul, span,h4{
+    color: white;
+} */
+
+ #container h2, h3, strong, li, ul, span,h4{
+    color: white;
+ }
+
+
+/* html body #container {
+    display: flex;
+    flex-direction: column;
+    padding: 3rem; */
+    /* Settate se riuscite a farne vedere 2 in una stessa riga e dargli lo stesso spazio ciascuno */
+ 
+  
+  /* html body #container #cardD {
+    
+    background-color: #3C3E45;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 4px 10px -1px, rgba(0, 0, 0, 0.9) 0px 2px 10px -1px;
+    /* display: flex; */
+    /* flex-grow: 1; */
+    /* margin: 2rem .6rem;
+  } */ 
+  
+  /* html body #container #cardD .textContainer {
+    padding: 2rem;
+  }
+  
+  html body #container #cardD .textContainer h2 {
+    font-size: 3rem;
+  } */
+  
+  /* html body #container #cardD .textContainer strong {
+    background-color: #54CC44;
+    font-size: 1.8rem;
+    display: block;
+    padding: 1rem 2rem;
+  } */
+  
+  /* html body #container #cardD .textContainer span {
+    font-size: 1.8rem;
+    margin: 2rem 0;
+    /* display: block; */
+  } 

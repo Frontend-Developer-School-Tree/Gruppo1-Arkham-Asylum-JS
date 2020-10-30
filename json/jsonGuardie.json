@@ -1,0 +1,38 @@
+[
+    {
+        "username":"admin",
+        "password":"admin", 
+        "nome":"admin", 
+        "cognome": "admin",
+        "data nascita": "0"
+    },
+    {
+        "username": "Domenico", 
+        "password":"admin",
+        "nome":"Domenico",
+        "cognome":"Lorusso",
+        "dataNascita":"5/5/1991"
+    },
+    {
+        "username":"Francesco",
+        "password":"admin",
+        "nome":"Francesco",
+        "cognome":"Coscarella",
+        "dataNascita":"23/10/1998"
+    },
+    {
+        "username":"Luca",
+        "password":"admin",
+        "nome":"Luca",
+        "cognome":"Della Vecchia",
+        "dataNascita":"29/11/1991"
+    },
+    {
+        "username":"Salvatore",
+        "password":"admin",
+        "nome":"Salvatore",
+        "cognome":"Corsaro",
+        "dataNascita":"17/1/1991"
+    }
+]
+
