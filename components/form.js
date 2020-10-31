@@ -17,9 +17,11 @@ const tit = document.querySelector('#titlePage')
 const usernameModal = document.getElementById('username')
 const pswModal = document.getElementById('pwd')
 const openModal=document.querySelector('#modalContainer')
+const pwdField=document.querySelector('#pwd')
+const inField=document.querySelector('#username')
 
 const headCont = document.getElementById('headerContainer')
-
+const inLogin = document.getElementById('#invLogin')
 
 
 
@@ -62,7 +64,7 @@ const handleOpenModal= (e) =>{
                 })
                 if(bool1==true){
                     console.log("accesso eseguito correttamente");
-                    alert("accesso eseguito correttamente");
+                    
                     openModal.remove();
                     btnOpenModal.remove();
                     tit.remove();
@@ -71,8 +73,10 @@ const handleOpenModal= (e) =>{
                 }
                 else{
                     console.log("errore")
-                    alert('i dati inseriti non sono corretti')
                     handleClearField();
+                    inField.classList.add('inputError');
+                    pwdField.classList.add('inputError');
+                    inLogin.classList.add('visible');
                 }
                 //   if((elem.username==loginObj.user)&&(elem.password==loginObj.pwd)){
                 //       console.log("accesso eseguito correttamente");

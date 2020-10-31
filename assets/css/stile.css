@@ -50,6 +50,15 @@ body{
 }
 .logoMain{
     width: 500px;
+    border-radius: 50%;
+    
+    animation: pulse 8s infinite;
+}
+@keyframes pulse{
+    0%{box-shadow: 0 0 0 0 #b9dff57a;}
+    50%{box-shadow: 0px 0px 40px 1px #b9dff57a;}
+    100%{box-shadow: 0px 0px 0px#b9dff57a;}
+    
 }
 .btnLogin{
     border:none;
@@ -101,6 +110,10 @@ body{
     border-radius: 10px;
 
 }
+
+
+
+
 /* -------figli di body ---------*/
 #modalHeader{
     position: absolute;
@@ -173,13 +186,17 @@ body{
     flex-direction: column;
     color:white;
 }
+.inputLogin:active{outline:none;}
 
+
+.invalidLogin{display:none;color: hsl(0, 78%, 27%); text-align: center; margin-bottom:50px;font-style: italic;}
 .inputField{
     margin-left: 5vh;
     background-color: transparent;
     border:none;
     border-bottom:  1px solid var(--uranianBlue);
     color:white;
+    padding:10px;
 }
 .inputField::placeholder{font-weight: 300;
     font-size: 18px;
@@ -188,13 +205,19 @@ body{
 }
 .inputField:focus{
     outline: none;
-    border-bottom: 2px solid var(--uranianBlue);
+    
 }
 label{
     font-size: 18px;
     color: var(--uranianBlue);
 }
 
+.inputError{
+    border:1px red solid;
+    border-radius: 15px;
+    
+            
+}
 #modCont{display:none;}
 /* --------------card detenuti e guardie ------------  */
 #containerCard{display:none; justify-content: space-around;}   
