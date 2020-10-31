@@ -21,7 +21,7 @@ const pwdField=document.querySelector('#pwd')
 const inField=document.querySelector('#username')
 
 const headCont = document.getElementById('headerContainer')
-const inLogin = document.getElementById('#invLogin')
+const inLogin = document.getElementById('invLogin')
 
 
 
