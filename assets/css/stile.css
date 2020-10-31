@@ -29,7 +29,7 @@ h1{
     font-size: 80px;
     text-transform: uppercase;
 }
-
+button:focus{outline: 0;}
 
 /*---------- GENERIC ------------ */
 body{
@@ -186,7 +186,7 @@ body{
     flex-direction: column;
     color:white;
 }
-.inputLogin:active{outline:none;}
+.inputLogin:focus{outline:none;}
 
 
 .invalidLogin{display:none;color: hsl(0, 78%, 27%); text-align: center; margin-bottom:50px;font-style: italic;}
