@@ -8,10 +8,14 @@
 </head>
 <body>
     
+    <div class="container">
+        <section> </section>
+    </div>
+    
     <header id="headerContainer" class="headerContainer">
         
         
-        <img src="./assets/img/logo.svg" id="imglogo" class="logoMain m-5"/> 
+        <a href="/"> <img src="./assets/img/logo.svg" id="imglogo" class="logoMain m-5"/> </a>
         
         
         <h1 id="titlePage" class="m-10">Arkham Asylum JS</h1>
@@ -28,7 +32,7 @@
             <form class="form" id="modalLogin" novalidate>
                 <div class="inputLogin">
                     <div class="wrapper">
-                            <h3 class="invalidLogin" id="invLogin">Invalid username or password</h3>
+                        <h3 class="invalidLogin" id="invLogin">Invalid username or password</h3>
                         <label for="username">username</label>
                         <input
                             type="text"
@@ -92,9 +96,6 @@
                 <h3></h3> <!-- razza-->
                 <strong></strong> <!-- livello pericolo-->
                 
-                
-                    
-                    
                     <!-- <a href="#ulChar"></a> -->
                     
                     <h4></h4>
@@ -111,10 +112,9 @@
                         <li id="7"></li> <!-- reato-->
                         <li id="8"></li> <!-- id-->
                     </ul>
-
-
             </div>
-            </div>
+        </div>
+
     </template>
 
         <template id='guardie'>
@@ -123,8 +123,6 @@
                     <h2 id="textH2"></h2> <!-- nome -->
                     <h3></h3> <!-- cognome-->
                     <strong></strong> <!-- livello pericolo-->
-                    
-                    
                     <button 
                         type="button" 
                         id="mortoBtn"></button>
@@ -141,11 +139,6 @@
     <div id="containerDetenuti"> </div> -->
 
     <!-- Attenzione che sotto c'è il conteiner, o commenti quello e metti che  -->
-
-    <footer id="footer"> </footer>
-
-
-
 
 
 
@@ -291,7 +284,11 @@
         </div>
     </div> 
     
-    <div id="container"></div>
+    <div id="containerGuardie"></div>
+    <div id="containerDetenuti"></div>
+
+    <footer id="footer"> </footer>
+
     <script src="/components/jsonDetenutiArkham.js"> </script>
     <script src="/components/jsonGuardieArkam.js"> </script>
     <script src="/components/form.js"></script>

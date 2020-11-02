@@ -1,12 +1,13 @@
-const container = document.getElementById('container')
+const containerDetenuti = document.getElementById('containerDetenuti')
+const containerGuardie = document.getElementById('containerGuardie')
 const template = document.getElementById('detenuti')
 const btnAdd = document.getElementById('cardD')
 
-const container3 = document.getElementById('containerContatore')
-const template3 = document.getElementById('templateDetenuti')
+//const container3 = document.getElementById('containerContatore')
+//const template3 = document.getElementById('templateDetenuti')
 const btnAddDetenuto=document.getElementById('btnDetenutiAggungi')
 const formAdd=document.getElementById('formAdd') ///da vericare
-const modalAddDeteneuto=document.getElementById('modalContainer modCont')
+const modalAddDetenuto=document.getElementById('modalContainer modCont')
 
 class Detenuti{
     static async getDetenuti(){
@@ -66,13 +67,14 @@ class Detenuti{
             cardDetenuti.getElementById('6').textContent= 'data Scarcerazione: '+ dete.dataScarcerazione
             cardDetenuti.getElementById('7').textContent= 'Reato Commesso: '+ dete.ReatoCommesso
             cardDetenuti.getElementById('8').textContent= 'Id: '+ dete.Id;
-            return container.appendChild(cardDetenuti)
+            return containerDetenuti.appendChild(cardDetenuti)
         })
     }
  
     static loadHandler(){
         Detenuti.getDetenuti()
-        //ContatoreDetenuti()
+        containerDetenuti.style.display = 'flex'
+        containerGuardie.style.display = 'none'
         
         
     }
@@ -116,7 +118,7 @@ class Detenuti{
             // effettuo il push dell'oggetto
             // courseArray.push(detenutoObj);
             // console.log(courseArray);
-            return container.appendChild(detenutoObj)
+            return containerDetenuti.appendChild(detenutoObj)
         }
       }  
 

@@ -36,8 +36,43 @@ body{
     
     font-family: 'Roboto', sans-serif;
     background-color: var(--black);
-    
+    background: url('../img/batman-superheroes-batman-the-dark-knight.jpg');
+    animation: color-change 5s linear infinite;
 }
+/*
+@keyframes color-change
+{
+    0%,100%
+    {
+        filter: hue-rotate(0deg);
+    }
+    50%
+    {
+        filter: hue-rotate(0deg);
+    }
+}
+.container{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url(/assets/img/rain.png);
+        animation: rain 0.2s linear infinite;
+}
+    @keyframes rain
+    {
+        0%
+        {
+            background-position: 0 0;
+        }
+        100%
+        {
+            background-position: 20% 100%;
+        }
+    }
+    */
+
 /* --------------Main Page-------------- */
 
 .headerContainer{
@@ -46,6 +81,7 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    
    
 }
 .logoMain{
@@ -221,7 +257,7 @@ label{
 #modCont{display:none;}
 /* --------------card detenuti e guardie ------------  */
 #containerCard{display:none; justify-content: space-around;}   
-#containerCard button{background-color: background-color: var(--black); border:none;cursor:pointer}
+#containerCard button{background-color: var(--black); border:none;cursor:pointer}
 #containerCard #imgdetenuti{width:50%;background-color: transparent;}
 #containerCard #imgguardie{width:50%;background-color: var(--black);}
 
@@ -237,7 +273,7 @@ label{
     align-items: center;
     color: var(--darkBlue);
 } */
-#container{
+#containerDetenuti{
     margin-top: 10vh;
     display:flex;
     justify-content: space-around;
@@ -246,6 +282,13 @@ label{
     /* align-items: center;
     color: var(--darkBlue); */
 }
+#containerGuardie{
+    margin-top: 10vh;
+    display:flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
 .textContainer{
     display: flex;
     flex-direction: column;
@@ -271,9 +314,6 @@ label{
     list-style-type: none;
     color:white;
 }
-#cardG{
-
-}
 
 
 /* .renderDetenuti{
@@ -292,9 +332,13 @@ label{
     color: white;
 } */
 
- #container h2, h3, strong, li, ul, span,h4{
+ #containerDetenuti h2, h3, strong, li, ul, span,h4{
     color: white;
  }
+ #containerGuardie h2, h3, strong{
+    color: white;
+ }
+
 
 
 /* html body #container {
@@ -332,4 +376,4 @@ label{
     font-size: 1.8rem;
     margin: 2rem 0;
     /* display: block; */
-  } 
+  /* }  */

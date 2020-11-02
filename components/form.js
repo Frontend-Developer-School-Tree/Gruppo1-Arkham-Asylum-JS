@@ -64,7 +64,6 @@ const handleOpenModal= (e) =>{
                 })
                 if(bool1==true){
                     console.log("accesso eseguito correttamente");
-                    
                     openModal.remove();
                     btnOpenModal.remove();
                     tit.remove();

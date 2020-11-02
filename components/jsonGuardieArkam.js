@@ -1,4 +1,5 @@
-const container1 = document.getElementById('container')
+const containerGuard = document.getElementById('containerGuardie')
+const containerDet = document.getElementById('containerDetenuti')
 const template1 = document.getElementById('guardie')
 const btnAdd1 = document.getElementById('cardG')
 
@@ -16,7 +17,7 @@ class Guardie{
             cardGuardia.querySelector('h2').textContent = 'Nome: ' + guardia.nome;
             cardGuardia.querySelector('h3').textContent = 'Cognome: ' + guardia.cognome;
             cardGuardia.querySelector('strong').textContent = 'Data Nascita: ' + guardia.dataNascita;
-            return container1.appendChild(cardGuardia)
+            return containerGuard.appendChild(cardGuardia)
             
         })
         
@@ -25,6 +26,8 @@ class Guardie{
     
     static loadHandler1(){
         Guardie.getGuardie()
+        containerDet.style.display = 'none'
+        containerGuard.style.display = 'flex'
     }
 
 }
